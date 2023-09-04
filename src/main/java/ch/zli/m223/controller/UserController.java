@@ -3,10 +3,12 @@ package ch.zli.m223.controller;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.ws.rs.BadRequestException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -47,6 +49,17 @@ public class UserController {
     @Operation(summary = "Delete an User", description = "Delets an User")
     public void delete(@RestPath Long entryId, ApplicationUser applicationUser) {
         userService.deleteApplication(entryId, applicationUser);
+    }
+
+    @Path("/{entryId}")
+    @PUT
+    @Operation(summary = "Delete an User", description = "Delets an User")
+    public void update(@RestPath Long entryId, ApplicationUser applicationUser) {
+        if (entryId == applicationUser.getId()) {
+            userService.updateApplication(entryId, applicationUser);
+        } else {
+            throw new BadRequestException();
+        }
     }
 
 }

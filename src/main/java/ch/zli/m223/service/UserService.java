@@ -31,4 +31,8 @@ public class UserService {
         entityManager.remove(userById);
     }
 
+    @Transactional
+    public void updateApplication(Long Id, ApplicationUser applicationUser) {
+        entityManager.merge(applicationUser);
+    }
 }
