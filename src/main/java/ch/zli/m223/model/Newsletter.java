@@ -26,4 +26,36 @@ public class Newsletter {
     @Column(nullable = false)
     private String Text;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Date getDatum() {
+        return Datum;
+    }
+
+    public void setDatum(Date datum) {
+        Datum = datum;
+    }
+
+    public String getText() {
+        return Text;
+    }
+
+    public void setText(String text) {
+        Text = text;
+    }
+
 }
