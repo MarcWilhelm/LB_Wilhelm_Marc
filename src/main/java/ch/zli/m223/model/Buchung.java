@@ -23,10 +23,10 @@ public class Buchung {
     private Date datum;
 
     @Column(nullable = false)
-    private String Ganztägig;
+    private String ganztägig;
 
     @Column(nullable = false)
-    private String Status;
+    private String status;
 
     @ManyToOne
     @JoinColumn(name = "Userid", nullable = false)
@@ -49,19 +49,27 @@ public class Buchung {
     }
 
     public String getGanztägig() {
-        return Ganztägig;
+        return ganztägig;
     }
 
     public void setGanztägig(String ganztägig) {
-        Ganztägig = ganztägig;
+        this.ganztägig = ganztägig;
     }
 
     public String getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(String status) {
-        Status = status;
+        this.status = status;
+    }
+
+    public ApplicationUser getUser() {
+        return user;
+    }
+
+    public void setUser(ApplicationUser user) {
+        this.user = user;
     }
 
 }

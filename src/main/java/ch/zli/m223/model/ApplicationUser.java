@@ -18,26 +18,26 @@ public class ApplicationUser {
     @Schema(readOnly = true)
     private Long id;
 
-    @Column
-    private String Vorname;
+    @Column(nullable = false)
+    private String vorname;
 
-    @Column
-    private String Nachname;
+    @Column(nullable = false)
+    private String nachname;
 
-    @Column
+    @Column(nullable = false)
     private String eMail;
 
-    @Column
-    private String Passwort;
+    @Column(nullable = false)
+    private String passwort;
 
-    @Column
-    private Boolean Newsleter;
+    @Column(nullable = false)
+    private Boolean newsleter;
 
-    @Column
-    private String Rolle;
+    @Column(nullable = false)
+    private String rolle;
 
     @OneToMany(mappedBy = "user")
-    private Set<Buchung> Buchung;
+    private Set<Buchung> buchung;
 
     public Long getId() {
         return id;
@@ -48,19 +48,19 @@ public class ApplicationUser {
     }
 
     public String getVorname() {
-        return Vorname;
+        return vorname;
     }
 
     public void setVorname(String vorname) {
-        Vorname = vorname;
+        this.vorname = vorname;
     }
 
     public String getNachname() {
-        return Nachname;
+        return nachname;
     }
 
     public void setNachname(String nachname) {
-        Nachname = nachname;
+        this.nachname = nachname;
     }
 
     public String geteMail() {
@@ -72,27 +72,35 @@ public class ApplicationUser {
     }
 
     public String getPasswort() {
-        return Passwort;
+        return passwort;
     }
 
     public void setPasswort(String passwort) {
-        Passwort = passwort;
+        this.passwort = passwort;
     }
 
     public Boolean getNewsleter() {
-        return Newsleter;
+        return newsleter;
     }
 
     public void setNewsleter(Boolean newsleter) {
-        Newsleter = newsleter;
+        this.newsleter = newsleter;
     }
 
     public String getRolle() {
-        return Rolle;
+        return rolle;
     }
 
     public void setRolle(String rolle) {
-        Rolle = rolle;
+        this.rolle = rolle;
+    }
+
+    public Set<Buchung> getBuchung() {
+        return buchung;
+    }
+
+    public void setBuchung(Set<Buchung> buchung) {
+        this.buchung = buchung;
     }
 
 }
