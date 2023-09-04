@@ -12,32 +12,29 @@ import javax.persistence.OneToMany;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 @Entity
-public class User {
+public class ApplicationUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(readOnly = true)
     private Long id;
 
-    @Column(nullable = false)
+    @Column
     private String Vorname;
 
-    @Column(nullable = false)
+    @Column
     private String Nachname;
 
-    @Column(nullable = false)
+    @Column
     private String eMail;
 
-    @Column(nullable = false)
+    @Column
     private String Passwort;
 
-    @Column(nullable = false)
+    @Column
     private Boolean Newsleter;
 
-    @Column(nullable = false)
+    @Column
     private String Rolle;
-
-    @Column(nullable = false)
-    private String meineBuchungen;
 
     @OneToMany(mappedBy = "user")
     private Set<Buchung> Buchung;
@@ -96,14 +93,6 @@ public class User {
 
     public void setRolle(String rolle) {
         Rolle = rolle;
-    }
-
-    public String getMeineBuchungen() {
-        return meineBuchungen;
-    }
-
-    public void setMeineBuchungen(String meineBuchungen) {
-        this.meineBuchungen = meineBuchungen;
     }
 
 }

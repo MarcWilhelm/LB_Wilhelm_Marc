@@ -30,7 +30,7 @@ public class Buchung {
 
     @ManyToOne
     @JoinColumn(name = "Userid", nullable = false)
-    private User user;
+    private ApplicationUser user;
 
     public Long getId() {
         return id;
