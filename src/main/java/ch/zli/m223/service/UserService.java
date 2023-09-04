@@ -25,4 +25,10 @@ public class UserService {
         return applicationUser;
     }
 
+    @Transactional
+    public void deleteApplication(Long Id, ApplicationUser applicationUser) {
+        ApplicationUser userById = entityManager.find(ApplicationUser.class, Id);
+        entityManager.remove(userById);
+    }
+
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -12,8 +13,10 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
+import org.jboss.resteasy.reactive.RestPath;
 
 import ch.zli.m223.model.ApplicationUser;
+import ch.zli.m223.model.Entry;
 import ch.zli.m223.service.UserService;
 
 @Path("/users")
@@ -37,6 +40,13 @@ public class UserController {
     @Operation(summary = "Creates a new User.", description = "Creates a new User and returns the newly added User.")
     public ApplicationUser create(ApplicationUser applicationUser) {
         return userService.createUser(applicationUser);
+    }
+
+    @Path("/{entryId}")
+    @DELETE
+    @Operation(summary = "Delete an User", description = "Delets an User")
+    public void delete(@RestPath Long entryId, ApplicationUser applicationUser) {
+        userService.deleteApplication(entryId, applicationUser);
     }
 
 }
