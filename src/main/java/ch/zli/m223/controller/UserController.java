@@ -18,7 +18,6 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import org.jboss.resteasy.reactive.RestPath;
 
 import ch.zli.m223.model.ApplicationUser;
-import ch.zli.m223.model.Entry;
 import ch.zli.m223.service.UserService;
 
 @Path("/users")
