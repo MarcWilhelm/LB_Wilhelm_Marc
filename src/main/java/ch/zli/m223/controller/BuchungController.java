@@ -17,6 +17,7 @@ import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import org.jboss.resteasy.reactive.RestPath;
 
+
 import ch.zli.m223.model.Buchung;
 import ch.zli.m223.service.BuchungService;
 
@@ -40,6 +41,32 @@ public class BuchungController {
     @Operation(summary = "Gets the Buchung of the ID.", description = "Returns Buchungen")
     public String idBuchungen(@RestPath Long id) {
         return buchungsService.findID(id);
+    }
+
+    @Path("/newTermin")
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Creates a new Buchung.", description = "Creates a new Buchung and returns the newly added Buchung.")
+    public Buchung create(Buchung buchung) {
+        return buchungsService.createBuchung(buchung);
+    }
+
+    @Path("/{Id}")
+    @DELETE
+    @Operation(summary = "Delete a Buchung", description = "Delets a Buchung")
+    public void delete(@RestPath Long Id, Buchung buchung) {
+        buchungsService.deleteBuchung(Id, buchung);
+    }
+
+    @PUT
+    @Operation(summary = "Delete an User", description = "Delets an User")
+    public void update(@RestPath Long entryId, Buchung buchung) {
+        if (entryId == buchung.getId()) {
+            buchungsService.updateBuchung(entryId, buchung);
+        } else {
+            throw new BadRequestException();
+        }
     }
 
 }
