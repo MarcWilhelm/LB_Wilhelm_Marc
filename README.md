@@ -1,6 +1,6 @@
 # M223 Praktischearbeit: CO-Workingspace
 
-Die Co-Workingspace Seite dient dazu um einen CO-Working space Online zu verwalten. Diese Bedeutet Buchungen erstellen.
+Die Co-Workingspace Seite dient dazu um einen CO-Working space Online zu verwalten. Diese Bedeutet Buchungen erstellen. Meine Zusätzliche erwartung war ein Newsletter welchen man Abonieren kann.
 
 ## Aufsetzn des Projektes
 
@@ -8,6 +8,7 @@ Die Co-Workingspace Seite dient dazu um einen CO-Working space Online zu verwalt
 1. Clone das Projekt lokal, um damit arbeiten zu können.
 1. Öffne das Projekt mit Visual Studio Code.
 1. Öffne das Projekt im Entwicklungscontainer.
+1. Installiere die Quarkus Extension
 
 
 ## Projekt Starten
