@@ -21,7 +21,7 @@ import ch.zli.m223.model.ApplicationUser;
 import ch.zli.m223.service.UserService;
 
 @Path("/users")
-@Tag(name = "Entries", description = "Handling of entries")
+@Tag(name = "Users", description = "Handling of Users")
 public class UserController {
 
     @Inject
@@ -72,9 +72,20 @@ public class UserController {
     @Path("/newsletter")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Operation(summary = "Gets all Users.", description = "Returns a list of all Users and all Information.")
+    @Operation(summary = "Gets all Users who subscribed the Newsletter.", description = "Returns a list of all Users that subscribed the Newsletter.")
     public List<ApplicationUser> findAllSubscriber() {
         return userService.findAllSubscriber();
+    }
+
+    @Path("/newsletter/subscribe/{userId}/{state}")
+    @PUT
+    @Operation(summary = "Subscribe/Unsubscribe an User", description = "Subscribe/Unsubscribe an User")
+    public void subscribeNewsletter(@RestPath Long userId, ApplicationUser applicationUser, @RestPath Boolean state) {
+        if (userId == applicationUser.getId()) {
+            userService.updateSubscription(userId, applicationUser, state);
+        } else {
+            throw new BadRequestException();
+        }
     }
 
 }

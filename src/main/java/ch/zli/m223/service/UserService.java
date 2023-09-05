@@ -52,4 +52,9 @@ public class UserService {
         }
     }
 
+    @Transactional
+    public void updateSubscription(Long Id, ApplicationUser applicationUser, Boolean state) {
+        applicationUser.setNewsleter(state);
+        entityManager.merge(applicationUser);
+    }
 }
