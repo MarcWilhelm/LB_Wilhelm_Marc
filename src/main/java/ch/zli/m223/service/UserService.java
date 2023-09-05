@@ -8,7 +8,6 @@ import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 
 import ch.zli.m223.model.ApplicationUser;
-import ch.zli.m223.model.Buchung;
 
 @ApplicationScoped
 public class UserService {
