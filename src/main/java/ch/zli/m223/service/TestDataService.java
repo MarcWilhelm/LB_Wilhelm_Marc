@@ -24,11 +24,11 @@ public class TestDataService {
 
     public void generateTestData(@Observes StartupEvent event) {
 
-        ApplicationUser user1 = createApplicationUser("Max", "Mustermann", "max@example.com", "passwort123",
+        ApplicationUser user1 = createApplicationUser("Müller", "Saskia", "saskia@example.com", "passwort123",
                 "Mitglied", false);
 
-        ApplicationUser user2 = createApplicationUser("Anna", "Musterfrau", "anna@example.com", "passwort456",
-                "Mitglied", true);
+        ApplicationUser user2 = createApplicationUser("Wilhelm", "Felix", "felix@example.com", "passwort456",
+                "Admin", true);
 
         Buchung buchung1 = createBuchungen("Vormitag", new Date(0), "Rejected", user1);
 
