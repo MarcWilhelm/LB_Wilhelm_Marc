@@ -1,0 +1,161 @@
+commit 20328945f6e8746b75c454ebc054c9237e0eb93d
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 13:54:33 2023 +0000
+
+    Removed Warning
+
+commit 00edca8396ff011cd422738638b4f1dddb94a21b
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 13:49:19 2023 +0000
+
+    Added Important data to the Reademe
+
+commit f93b178a86b599f086a377c25b31947e7b142812
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 13:29:12 2023 +0000
+
+    Added Description to my readme
+
+commit 6ff14c5b9f31bed8ed2a2d524217d7ea4d6788e2
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 13:28:55 2023 +0000
+
+    Removed Tests
+
+commit b3dceed6a8571cf194301d7b7169e5c2b332fd19
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 12:04:22 2023 +0000
+
+    Corrected all Documentation
+
+commit bbe510cd7d0f662d637e684aa355a62d72ab1bf1
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 09:31:39 2023 +0000
+
+    Testdata Updated
+
+commit 0717346cf5c899f7bcfac420da1b7ef00e0a5a9b
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 09:31:28 2023 +0000
+
+    README.md Updated
+
+commit 390e7b2cdb07610fabefdfa3323746c4aecf4f30
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 09:05:24 2023 +0000
+
+    Added and Update PUT request
+
+commit 194456005477f427ccbbf6471857dab7fb933624
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 08:52:48 2023 +0000
+
+    Added JSON ignore
+
+commit dd4dbedc5877b1c6ae12dc8a4495850735878b23
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 08:52:39 2023 +0000
+
+    Added Update
+
+commit a844b70e6b3ca1a00cedc0b57777e2d386699814
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 08:41:08 2023 +0000
+
+    Added Get alle Newsletter subscriber
+
+commit 748eb54f03fa247ed572c4211715dfda53991b36
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 08:35:00 2023 +0000
+
+    Tag edited
+
+commit 6ac89206eb6ef2ef2efca88dba0a6a7de1bfb695
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 08:31:44 2023 +0000
+
+    Addded Newsletter data
+
+commit d5715ee3e7fe35b78a880a5e3dc9c005b49ffff5
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 08:26:11 2023 +0000
+
+    Service verwalten
+
+commit f8722d33b9d25b4029f19fab32073bfb101d86d8
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 08:25:56 2023 +0000
+
+    Daten beim Start hochladen
+
+commit c86205c8bc10973d61510a4bd47b2e7004b3dca1
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 08:25:44 2023 +0000
+
+    Buchungen Verwalten
+
+commit 40523c91c843a990a3220ebfa714fed177e998f3
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Tue Sep 5 08:25:19 2023 +0000
+
+    Add Newsletter
+
+commit cdea50adef04b1ad233a51ca32a76cdcd610f6c6
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 13:32:48 2023 +0000
+
+    Added Post to get Status
+
+commit cee84c158acaab5c03aaf31bc7b0e6bb3adf15cd
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 13:32:22 2023 +0000
+
+    Removed Punchclock Code
+
+commit 65d16ff25238aef2c4ef66d87d6d0855bfb1ebbe
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 12:30:43 2023 +0000
+
+    Added PUT Request
+
+commit 0defa9541e184093b5cb5e0b8e2cb369ca34fcad
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 12:22:19 2023 +0000
+
+    Added User Delete
+
+commit 3cdee45e8a76174312cb1990dca65416591c055a
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 12:07:11 2023 +0000
+
+    Post no Works
+
+commit 67093b8c2acd9be8ae21d0b13848ee32fccc0b34
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 11:29:44 2023 +0000
+
+    Added GET and PUT but Put returns the values as null
+
+commit e9d06f1ef2a15f3911c5fab3abffe90ae7cd84c4
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 10:51:13 2023 +0000
+
+    added getter and setter + controller and services
+
+commit 0738c03dca32929bfd84c98d4aae3d6646aa352a
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 09:09:38 2023 +0000
+
+    CHanged Artifact ID
+
+commit 5ca7a154423c549271ed0499c9770b828d19c900
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 09:08:59 2023 +0000
+
+    Added Entity without Relatios
+
+commit 5afa4d5c6308b2028899d9b7b326b99851469744
+Author: Marc Wilhelm <73398298+MarcWilhelm@users.noreply.github.com>
+Date:   Mon Sep 4 10:22:32 2023 +0200
+
+    Copyed Punchclock
