@@ -11,6 +11,8 @@ import javax.persistence.OneToMany;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 public class ApplicationUser {
     @Id
@@ -37,6 +39,7 @@ public class ApplicationUser {
     private String rolle;
 
     @OneToMany(mappedBy = "user")
+    @JsonIgnoreProperties(value = "buchung")
     private Set<Buchung> buchung;
 
     public Long getId() {

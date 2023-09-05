@@ -35,4 +35,14 @@ public class UserService {
     public void updateApplication(Long Id, ApplicationUser applicationUser) {
         entityManager.merge(applicationUser);
     }
+
+    @Transactional
+    public String signIn(ApplicationUser applicationUser) {
+        ApplicationUser userByUsername = entityManager.find(ApplicationUser.class, applicationUser.geteMail());
+        if (userByUsername.getPasswort() == applicationUser.getPasswort()) {
+            return "Loged In";
+        } else {
+            return "Unauthorized";
+        }
+    }
 }
