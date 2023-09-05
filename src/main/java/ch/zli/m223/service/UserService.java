@@ -19,6 +19,12 @@ public class UserService {
         return query.getResultList();
     }
 
+    public List<ApplicationUser> findAllSubscriber() {
+        var query = entityManager.createQuery("FROM ApplicationUser WHERE newsleter = true ", ApplicationUser.class);
+        return query.getResultList();
+
+    }
+
     @Transactional
     public ApplicationUser createUser(ApplicationUser applicationUser) {
         entityManager.persist(applicationUser);
@@ -45,4 +51,5 @@ public class UserService {
             return "Unauthorized";
         }
     }
+
 }

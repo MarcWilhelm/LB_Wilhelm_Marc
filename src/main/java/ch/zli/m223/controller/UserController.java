@@ -3,7 +3,6 @@ package ch.zli.m223.controller;
 import java.util.List;
 
 import javax.inject.Inject;
-import javax.print.DocFlavor.STRING;
 import javax.ws.rs.BadRequestException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -68,6 +67,14 @@ public class UserController {
     @Operation(summary = "Sign In", description = "Sign in")
     public String signIn(ApplicationUser applicationUser) {
         return userService.signIn(applicationUser);
+    }
+
+    @Path("/newsletter")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Gets all Users.", description = "Returns a list of all Users and all Information.")
+    public List<ApplicationUser> findAllSubscriber() {
+        return userService.findAllSubscriber();
     }
 
 }
