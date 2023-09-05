@@ -39,7 +39,7 @@ public class ApplicationUser {
     private String rolle;
 
     @OneToMany(mappedBy = "user")
-    @JsonIgnoreProperties(value = "buchung")
+    @JsonIgnoreProperties(value = "user")
     private Set<Buchung> buchung;
 
     public Long getId() {
