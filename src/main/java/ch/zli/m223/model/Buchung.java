@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 public class Buchung {
     @Id
@@ -29,7 +31,8 @@ public class Buchung {
     private String status;
 
     @ManyToOne
-    @JoinColumn(name = "Userid", nullable = false)
+    @JoinColumn(name = "Userid")
+    @JsonIgnoreProperties(value = "buchung")
     private ApplicationUser user;
 
     public Long getId() {

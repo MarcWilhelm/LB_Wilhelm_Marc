@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -38,6 +40,7 @@ public class ApplicationUser {
     @Column(nullable = false)
     private String rolle;
 
+    @Fetch(FetchMode.JOIN)
     @OneToMany(mappedBy = "user")
     @JsonIgnoreProperties(value = "user")
     private Set<Buchung> buchung;

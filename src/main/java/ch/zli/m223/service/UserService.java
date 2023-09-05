@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 
 import ch.zli.m223.model.ApplicationUser;
+import ch.zli.m223.model.Buchung;
 
 @ApplicationScoped
 public class UserService {
@@ -32,14 +33,14 @@ public class UserService {
     }
 
     @Transactional
-    public void deleteApplication(Long Id, ApplicationUser applicationUser) {
+    public void deleteApplication(Long Id) {
         ApplicationUser userById = entityManager.find(ApplicationUser.class, Id);
         entityManager.remove(userById);
     }
 
     @Transactional
     public ApplicationUser updateApplication(Long Id, ApplicationUser applicationUser) {
-       return  entityManager.merge(applicationUser);
+        return entityManager.merge(applicationUser);
     }
 
     @Transactional
@@ -53,7 +54,10 @@ public class UserService {
     }
 
     @Transactional
-    public ApplicationUser updateSubscription(Long Id, ApplicationUser applicationUser, Boolean state) {
+    public ApplicationUser updateSubscription(Long Id, Boolean state) {
+
+        ApplicationUser applicationUser = entityManager.find(ApplicationUser.class, Id);
+
         applicationUser.setNewsleter(state);
         return entityManager.merge(applicationUser);
     }

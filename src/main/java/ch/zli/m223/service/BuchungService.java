@@ -31,7 +31,7 @@ public class BuchungService {
     }
 
     @Transactional
-    public void deleteBuchung(Long Id, Buchung buchung) {
+    public void deleteBuchung(Long Id) {
         Buchung buchungById = entityManager.find(Buchung.class, Id);
         entityManager.remove(buchungById);
     }
