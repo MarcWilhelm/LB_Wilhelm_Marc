@@ -10,13 +10,11 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
-
-import ch.zli.m223.model.Buchung;
 import ch.zli.m223.model.Newsletter;
 import ch.zli.m223.service.NewsletterService;
 
 @Path("/newsLetter")
-@Tag(name = "Bookings", description = "Handling of Bookings")
+@Tag(name = "Newsletter", description = "Handling of the Newsletter")
 public class NewsletterController {
 
     @Inject
