@@ -12,6 +12,7 @@ import javax.transaction.Transactional;
 
 import ch.zli.m223.model.ApplicationUser;
 import ch.zli.m223.model.Buchung;
+import ch.zli.m223.model.Newsletter;
 
 @ApplicationScoped
 public class TestDataService {
@@ -35,6 +36,10 @@ public class TestDataService {
 
         Buchung buchung3 = createBuchungen("GanzerTag", new Date(0), "Pending", user2);
 
+        Newsletter newsletter1 = createNewsletter("Versicherungs Treff sind nur Versicherungsmittarbeiter erlaubt",
+                new Date(0), "versicherungs Treff");
+        Newsletter newsletter2 = createNewsletter("Neues Büro in Winterthur", new Date(0), "Neues Büro");
+
         entityManager.persist(user1);
         entityManager.persist(user2);
 
@@ -42,6 +47,8 @@ public class TestDataService {
         entityManager.persist(buchung2);
         entityManager.persist(buchung3);
 
+        entityManager.persist(newsletter1);
+        entityManager.persist(newsletter2);
     }
 
     private ApplicationUser createApplicationUser(String nachname, String vorname, String email, String passwort,
@@ -67,4 +74,11 @@ public class TestDataService {
         return buchung;
     }
 
+    private Newsletter createNewsletter(String text, Date datum, String titel) {
+        Newsletter newsLetter = new Newsletter();
+        newsLetter.setText(text);
+        newsLetter.setTitle(titel);
+        newsLetter.setDatum(datum);
+        return newsLetter;
+    }
 }
