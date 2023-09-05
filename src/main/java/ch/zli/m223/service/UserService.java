@@ -38,8 +38,8 @@ public class UserService {
     }
 
     @Transactional
-    public void updateApplication(Long Id, ApplicationUser applicationUser) {
-        entityManager.merge(applicationUser);
+    public ApplicationUser updateApplication(Long Id, ApplicationUser applicationUser) {
+       return  entityManager.merge(applicationUser);
     }
 
     @Transactional
@@ -53,8 +53,8 @@ public class UserService {
     }
 
     @Transactional
-    public void updateSubscription(Long Id, ApplicationUser applicationUser, Boolean state) {
+    public ApplicationUser updateSubscription(Long Id, ApplicationUser applicationUser, Boolean state) {
         applicationUser.setNewsleter(state);
-        entityManager.merge(applicationUser);
+        return entityManager.merge(applicationUser);
     }
 }

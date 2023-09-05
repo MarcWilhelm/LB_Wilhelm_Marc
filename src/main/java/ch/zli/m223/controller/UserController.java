@@ -53,9 +53,9 @@ public class UserController {
     @Path("/{entryId}")
     @PUT
     @Operation(summary = "Delete an User", description = "Delets an User")
-    public void update(@RestPath Long entryId, ApplicationUser applicationUser) {
+    public ApplicationUser update(@RestPath Long entryId, ApplicationUser applicationUser) {
         if (entryId == applicationUser.getId()) {
-            userService.updateApplication(entryId, applicationUser);
+            return userService.updateApplication(entryId, applicationUser);
         } else {
             throw new BadRequestException();
         }
@@ -80,9 +80,11 @@ public class UserController {
     @Path("/newsletter/subscribe/{userId}/{state}")
     @PUT
     @Operation(summary = "Subscribe/Unsubscribe an User", description = "Subscribe/Unsubscribe an User")
-    public void subscribeNewsletter(@RestPath Long userId, ApplicationUser applicationUser, @RestPath Boolean state) {
+    public ApplicationUser subscribeNewsletter(@RestPath Long userId, ApplicationUser applicationUser,
+            @RestPath Boolean state) {
         if (userId == applicationUser.getId()) {
-            userService.updateSubscription(userId, applicationUser, state);
+
+            return userService.updateSubscription(userId, applicationUser, state);
         } else {
             throw new BadRequestException();
         }
